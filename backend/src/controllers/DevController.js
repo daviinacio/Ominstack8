@@ -42,10 +42,10 @@ module.exports = {
         const { username } = req.body;
 
         // Verifica se já existe um cadastro com o mesmo username
-        const userExists = await Dev.findOne({ user: username });
+        const userExists = await Dev.findOne({ user: username.toLowerCase() });
 
         if(userExists){
-            console.log(`Usuário ${username} já cadastrado`);
+            console.log(`Usuário ${userExists.user} já cadastrado`);
             return res.json(userExists);
         }
 
