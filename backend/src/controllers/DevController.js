@@ -39,10 +39,13 @@ module.exports = {
         //console.log(req.body);
 
         // Obtendo a variável com desestruturação
-        const { username } = req.body;
+        const { username: _username } = req.body;
+        const username = _username.toLowerCase()
+        
+        //const username = ({username } = req.body).toLowerCase();
 
         // Verifica se já existe um cadastro com o mesmo username
-        const userExists = await Dev.findOne({ user: username.toLowerCase() });
+        const userExists = await Dev.findOne({ user: username });
 
         if(userExists){
             console.log(`Usuário ${userExists.user} já cadastrado`);

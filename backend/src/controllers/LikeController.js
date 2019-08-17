@@ -2,6 +2,8 @@ const Dev = require('../models/Devs');
 
 module.exports = {
     async store(req, res) {
+        //console.log(req.io, req.connectedUsers);
+
         // Obtem os parametros passados na rota
         //console.log(req.params);
         // Obtem os parametros passados no header
@@ -33,6 +35,21 @@ module.exports = {
 
         // Verifica se o like é recíproco
         if(targerDev.likes.includes(loggedDev._id)){
+            // Recupera o socket id dos devs logado e alvo pelo id de usuário
+            const loggedSocket = req.connectedUsers[user];
+            const targetSocket = req.connectedUsers[devId];
+
+            if(loggedSocket){
+                // Recupera a conexão do usuário logado e emite um match com o targetDev
+                req.io.to(loggedSocket).emit('match', targerDev);
+            }
+
+            if(targetSocket){
+                // Recupera a conexão do usuário logado e emite um match com o targetDev
+                req.io.to(targetSocket).emit('match', loggedDev);
+            }
+
+
             console.log(`${loggedDev.user} e ${targerDev.user} deram match!`);
         }
         else {

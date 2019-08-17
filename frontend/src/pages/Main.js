@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import io from 'socket.io-client';
 
 // Serve para redirecionar dentro da aplicação
 import { Link } from 'react-router-dom';
 
+// StyleSheet
 import './Main.css';
 
 import api from '../services/api';
 
+// Assets
 import logo from '../assets/logo.svg';
 import like from '../assets/like.svg';
 import dislike from '../assets/dislike.svg';
+import itsamatch from '../assets/itsamatch.png';
 
 // O react-router-dom inclue uma propriedade no componente chamado 'match'
 // Dentro desse 'match' tem todos os parametros que foram passados para essa rota
@@ -18,6 +22,7 @@ export default function Main({ match }){
     // Toda vez que for necessário uma variável que o componente possa ter acesso,
     // se usa o useState(<Valor inicial>)
     const [ users, setUsers ] = useState([]);
+    const [ matchDev, setMatchDev ] = useState(null);
 
     // Recebe 2 parametros: 
     //      Função que quer executar (pode ser uma arrow function. () => {})
@@ -44,6 +49,32 @@ export default function Main({ match }){
 
         loadUsers();
     },[match.params.id]);
+
+    useEffect(() => {
+        const socket = io('http://192.168.0.10:3333/', {
+            // Parametros adicionais que se pode enviar na conexão
+            query: {
+                user: match.params.id
+            }
+        });
+
+        // Escuta o evento match e recebe o dev
+        socket.on('match', dev => {
+            setMatchDev(dev);
+        })
+
+        /*socket.on('world', message => {
+            console.log(message);
+        });
+
+        setTimeout(() => {
+            // Emite uma mensagem do tipo 'hello' para o backend
+            socket.emit('hello', {
+                message: 'Hello world'
+            })
+        }, 3000);*/
+
+    }, [match.params.id]);
 
     // Toda ação gerada a partir de uma interação do usuário é chamada de handle
     async function handleDislike(id){
@@ -116,6 +147,18 @@ export default function Main({ match }){
             ) : (
                 <div className="empty">Acabou :(</div>
             )}
+
+            {/* // Mostra a tela de match se 'matchDev' for qualquer valor válido (não falsy) */}
+            { matchDev && (
+                <div className="match-container">
+                    <img src={itsamatch} alt="It's a match" />
+                    <img className="avatar" src={matchDev.avatar} alt="" />
+                    <strong>{matchDev.name}</strong>
+                    <p>{matchDev.bio}</p>
+                    
+                    <button onClick={() => { setMatchDev(null); }}>Fechar</button>
+                </div>
+            ) }
         </div>
     );
 }
