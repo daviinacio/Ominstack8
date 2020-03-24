@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "748fa844499a5ea61a4c09e335bf63c2",
+    "revision": "14d60b8dba57ab5124c1c628c7240f01",
     "url": "/Omnistack8/index.html"
   },
   {
