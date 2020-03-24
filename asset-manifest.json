@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Omnistack8/static/css/main.c02c08d3.chunk.css",
-    "main.js": "/Omnistack8/static/js/main.4a0eac87.chunk.js",
-    "main.js.map": "/Omnistack8/static/js/main.4a0eac87.chunk.js.map",
+    "main.js": "/Omnistack8/static/js/main.1ec7b0da.chunk.js",
+    "main.js.map": "/Omnistack8/static/js/main.1ec7b0da.chunk.js.map",
     "runtime-main.js": "/Omnistack8/static/js/runtime-main.afd01077.js",
     "runtime-main.js.map": "/Omnistack8/static/js/runtime-main.afd01077.js.map",
     "static/js/2.2c94bd96.chunk.js": "/Omnistack8/static/js/2.2c94bd96.chunk.js",
     "static/js/2.2c94bd96.chunk.js.map": "/Omnistack8/static/js/2.2c94bd96.chunk.js.map",
     "index.html": "/Omnistack8/index.html",
-    "precache-manifest.4a18e1cde8d8aef18e07d925b5ac8c71.js": "/Omnistack8/precache-manifest.4a18e1cde8d8aef18e07d925b5ac8c71.js",
+    "precache-manifest.8a8abebe466c2a2c273373b9b993d4cb.js": "/Omnistack8/precache-manifest.8a8abebe466c2a2c273373b9b993d4cb.js",
     "service-worker.js": "/Omnistack8/service-worker.js",
     "static/css/main.c02c08d3.chunk.css.map": "/Omnistack8/static/css/main.c02c08d3.chunk.css.map",
     "static/js/2.2c94bd96.chunk.js.LICENSE.txt": "/Omnistack8/static/js/2.2c94bd96.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.afd01077.js",
     "static/js/2.2c94bd96.chunk.js",
     "static/css/main.c02c08d3.chunk.css",
-    "static/js/main.4a0eac87.chunk.js"
+    "static/js/main.1ec7b0da.chunk.js"
   ]
 }
