@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a2871e294ad3c6134c9b440953422220",
+    "revision": "06fa78d737d777cd4e1a329f30089c9f",
     "url": "/Omnistack8/index.html"
   },
   {
-    "revision": "8a73a2c949d4ad4ad813",
-    "url": "/Omnistack8/static/css/main.c02c08d3.chunk.css"
+    "revision": "76d7675064aa29117e9e",
+    "url": "/Omnistack8/static/css/main.b3a72401.chunk.css"
   },
   {
-    "revision": "a81fdf9234703602f4af",
-    "url": "/Omnistack8/static/js/2.2c94bd96.chunk.js"
+    "revision": "7c96dd43fcee29e4817e",
+    "url": "/Omnistack8/static/js/2.5f6b059f.chunk.js"
   },
   {
-    "revision": "461cae16d5efcce0affb54cb7c40afdf",
-    "url": "/Omnistack8/static/js/2.2c94bd96.chunk.js.LICENSE.txt"
+    "revision": "23495a9bf057f1af17848e75244fb6ef",
+    "url": "/Omnistack8/static/js/2.5f6b059f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a73a2c949d4ad4ad813",
-    "url": "/Omnistack8/static/js/main.1ec7b0da.chunk.js"
+    "revision": "76d7675064aa29117e9e",
+    "url": "/Omnistack8/static/js/main.4a05afbb.chunk.js"
   },
   {
     "revision": "c6c360fec89d11191830",
