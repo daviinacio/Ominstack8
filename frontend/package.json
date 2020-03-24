@@ -2,17 +2,21 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://daviinacio.com.br/Omnistack8",
   "dependencies": {
     "axios": "^0.19.0",
+    "gh-pages": "^2.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.0",
+    "react-scripts": "^3.4.1",
     "socket.io-client": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

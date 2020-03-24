@@ -51,7 +51,7 @@ export default function Main({ match }){
     },[match.params.id]);
 
     useEffect(() => {
-        const socket = io('http://192.168.0.10:3333/', {
+        const socket = io('https://api-daviapps.herokuapp.com/', {
             // Parametros adicionais que se pode enviar na conexão
             query: {
                 user: match.params.id
