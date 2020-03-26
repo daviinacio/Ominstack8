@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Omnistack8/precache-manifest.7ec53a48e2726d591dc2e15750715cb5.js"
+  "/Omnistack8/precache-manifest.82746c3a194f55d6dac703fac15d2cee.js"
 );
 
 self.addEventListener('message', (event) => {
