@@ -8,6 +8,10 @@ module.exports = {
     async index(req, res){
         const { user } = req.headers;
 
+        if(!user){
+            return res.json(await Dev.find());
+        }
+
         // Obtem as instancias no banco de dados
         const loggedDev = await Dev.findById(user);
 

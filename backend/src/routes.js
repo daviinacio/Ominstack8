@@ -5,6 +5,7 @@ const DevController = require('./controllers/DevController');
 const LikeController = require('./controllers/LikeController');
 const DislikeController = require('./controllers/DislikeController');
 const ClearController = require('./controllers/ClearController');
+const AppController = require('./controllers/AppController');
 
 // Cria uma instancia do Router
 const routes = express.Router();
@@ -29,12 +30,15 @@ routes.get('/', (req, res) => {
 
 // Ação para o método GET
 routes.get('/devs', DevController.index);
+routes.get('/apps', AppController.index);
+routes.get('/apps/:app', AppController.index);
 
 // Ação para o médoto POST
 routes.post('/devs', DevController.store);
 routes.post('/devs/:devId/likes', LikeController.store);
 routes.post('/devs/:devId/dislikes', DislikeController.store);
 routes.post('/devs/:username/clear', ClearController.store);
+routes.post('/apps', AppController.store)
 
 /*routes.post('/devs', (req, res) => {
     // Corpo do request

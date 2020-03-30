@@ -81,4 +81,4 @@ app.use(express.json());
 app.use(routes);
 
 // Configura o servidor para ouvir a porta 3333
-server.listen(3333);
+server.listen(process.env.PORT || 3333);
