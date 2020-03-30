@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://api-daviapps.herokuapp.com/'
+    baseURL: 'https://omnistack8-di.herokuapp.com/'
 });
 
 export default api;
