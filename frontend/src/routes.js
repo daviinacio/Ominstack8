@@ -8,7 +8,7 @@ export default function Routes(){
 
     // O exact força o router a indentificar apenas se a rota for exatamente igual
     return (
-        <BrowserRouter basename="/Omnistack8">
+        <BrowserRouter basename="/tindev">
             <Route path="/" exact component={Login}/>
             <Route path="/dev/:id" component={Main}/>
         </BrowserRouter>

@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://daviinacio.com.br/Omnistack8",
+  "homepage": "https://daviinacio.com.br/tindev",
   "dependencies": {
     "axios": "^0.19.0",
     "react": "^16.9.0",
